@@ -1,0 +1,14 @@
+#       //////////////////////////////
+#       /                            /
+#       /        Log Messages        /
+#       /                            /
+#       //////////////////////////////
+
+# Internal placeholders:
+#   {prefix} -> Plugin prefix
+
+prefix: "&8[&cCombatReforged&8]&7"
+
+Unknow File Type: "{prefix} Error 406: File is not a YAML Config file"
+No Config: "{prefix} Error 405: Path YAML not found"
+No File: "{prefix} Error 404: File not Found"
