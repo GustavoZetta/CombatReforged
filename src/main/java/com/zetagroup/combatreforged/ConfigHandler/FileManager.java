@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
+import java.util.logging.Level;
 
 public class FileManager {
     private String getLog(int LogNum) {
