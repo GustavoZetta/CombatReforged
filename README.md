@@ -10,8 +10,6 @@ A group project between Pigzzrule & GustavoZeta
 🟡 -> Updating
 🟢 -> Done!
 
-## Pigzzrule, finish this later
-
 - 🔴 2 Moviment Abilities for every class
 - 🔴 Classes
   - 🔴 Bard
