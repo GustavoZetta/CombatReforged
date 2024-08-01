@@ -18,7 +18,7 @@ A group project between Pigzzrule & GustavoZeta
   - 🔴 Witch
     - 🔴 Projectiles
     - 🔴 Flight
-  - 🔴 SwashBuckler (Wtf this name means) - Gu
+  - 🔴 SwashBuckler (Wtf this name means)
     - 🔴 Invencible for 0.5s
 - 🔴 Item system
   - 🔴 Unlocking
