@@ -1,5 +1,7 @@
 package com.zetagroup.combatreforged.Commands;
 
+
+
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,6 +10,11 @@ import org.bukkit.entity.Player;
 
 
 public class Class implements CommandExecutor {
+
+    public Class {
+        
+    }
+    
     static String cmd = "class"; // Defining the "/class" command as a "static" for less RAM usage
     @Override
     public boolean onCommand(CommandSender sender, Command command, String string, String[] arguments) {
