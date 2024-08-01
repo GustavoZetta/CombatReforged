@@ -1,14 +1,29 @@
 package com.zetagroup.combatreforged.Commands;
 
-import org.bukkit.Location;
+
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.zetagroup.combatreforged.ConfigManager;
+
 
 public class Class implements CommandExecutor {
-    static String cmd = "class"; // Defining the "/class" command as a "static" for less RAM usage
+
+    YamlConfiguration config = null;
+
+    private String cmd; // Defining the "/class" command, later on it defines
+    
+    public Class(ConfigManager configfile) { // Default function executed everytime the class starts
+        config = configfile.getFile("commands.yml"); // Code to define the actual configuration so you can get things from it
+        cmd = config.getString("commands.class.name");
+
+        
+    }
+
+     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String string, String[] arguments) {
         if (!(command.getName().equals(cmd))) { return true; } // If the command name executed is not "/class", end the function by returning "true" for "Executed Right"

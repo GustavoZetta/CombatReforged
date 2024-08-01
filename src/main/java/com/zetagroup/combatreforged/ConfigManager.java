@@ -7,13 +7,21 @@ import java.io.File;
 import java.util.logging.Level;
 
 public class ConfigManager {
+    Main plugin;
+
+    public ConfigManager(Main plugin) {
+        this.plugin = plugin;
+    }
+
+
     private String getLog(int LogNum) { // private function that returns the log messages
         File file = null; // Defining "file"
         YamlConfiguration config = null; // Defining "config"
         String prefix = null; // Defining "prefix" (for messages)
+       
 
         try { // A try executes a function and if any error happens, you can catch that error so the class doesn't crash
-            file = new File(Bukkit.getUpdateFolderFile().getPath(), "messages/msglog.yml"); // Defining file as a actual file
+            file = new File(plugin.getDataFolder(), "messages/msglog.yml"); // Defining file as a actual file
             config = YamlConfiguration.loadConfiguration(file); // Defining config as a actual config variable
             prefix = config.getString("prefix").replace('&', '§'); // Defining the prefix as the actual log prefix
         } catch (NullPointerException Error) { // Catches the error and send a message to ghe log
