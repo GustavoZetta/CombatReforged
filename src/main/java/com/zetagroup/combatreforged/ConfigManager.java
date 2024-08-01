@@ -1,4 +1,4 @@
-package com.zetagroup.combatreforged.ConfigHandler;
+package com.zetagroup.combatreforged;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.util.logging.Level;
 
-public class FileManager {
+public class ConfigManager {
     private String getLog(int LogNum) { // private function that returns the log messages
         File file = null; // Defining "file"
         YamlConfiguration config = null; // Defining "config"
@@ -44,7 +44,7 @@ public class FileManager {
             }
             case 406: { // else if (LogNum == 406) {...}
                 try {
-                    String msg = config.getString("Unknow File Type").replace('&', '§'); // replaces the & char with the actual color character
+                    String msg = config.getString("Unknown File Type").replace('&', '§'); // replaces the & char with the actual color character
                     msg.replace("{prefix}", prefix); // Transform the "{prefix}" placeholder into the actual prefix
                     return msg; // return the message the plugin got from the config
                 } catch (NullPointerException Error) { // Catch any error
@@ -52,25 +52,30 @@ public class FileManager {
                     return prefix + " Error 406: File is not a YAML Config file"; // return the backup message
                 }
             }
-            default: { //else {...} -> Its an default case if other comparations were not found
-                return prefix + " Unknow error, please contact the developer"; // return the backup message
+            default: { // else {...} -> Its an default case if other comparations were not found
+                return prefix + " Unknown error, please contact the developer"; // return the backup message
             }
         }
     }
 
-    public void getFile(String filepath) { // Function for getting the file for Yaml(.yml) Configs
-        if (filepath == null || filepath.trim().isEmpty()) { return; } // If the filepath is empty, finishes the function
+    public YamlConfiguration getFile(String filepath) { // Function for getting the file for Yaml(.yml) Configs
+        if (filepath == null || filepath.trim().isEmpty()) { return null; } // If the filepath is empty, finishes the function
 
         if (filepath.endsWith(".yml")) { // If the filetype is a .yml, continues
             File file = new File(Bukkit.getUpdateFolderFile().getPath(), filepath); // Gets the file with the main file path
 
-            if (!file.exists()) { // If file does not exists alredly, sends an error and ends the function
+            if (!file.exists()) { // If file does not exists alredly, sends an error to the console and ends the function
                 Bukkit.getLogger().log(Level.WARNING, getLog(404));
-                return;
+                return null;
             }
-        } else {
+
+            YamlConfiguration config = YamlConfiguration.loadConfiguration(file); // Defines the config file
+
+            return config;
+
+        } else { // If file is not a .yml, sends an error to the console and ends the function
             Bukkit.getLogger().log(Level.WARNING, getLog(406));
-            return;
+            return null;
         }
     }
 }

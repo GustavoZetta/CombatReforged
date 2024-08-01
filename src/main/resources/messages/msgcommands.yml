@@ -1,0 +1,19 @@
+#       //////////////////////////////
+#       /                            /
+#       /      Command Messages      /
+#       /                            /
+#       //////////////////////////////
+
+# Internal placeholders:
+#   {prefix} -> Plugin prefix
+
+prefix: "&8[&cCombatReforged&8]&7"
+
+#       //////////////////////////////
+#       /                            /
+#       /          WARNING ⚠         /
+#       /                            /
+#       //////////////////////////////
+
+# For now, only the messages with more than one string of code are multi-line support.
+# Later on I'll make so every message in this folder can be multiple lines.

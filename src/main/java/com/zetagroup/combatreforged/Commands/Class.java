@@ -17,8 +17,7 @@ public class Class implements CommandExecutor {
         // If it returns true, the message will not appear
         Player player = (Player) sender; // Defining the sender as a player, since now we know its really a player
 
-
-        Location loc = player.getLocation();
+        // I'll be using that for the class selection menu later
 
         return true;
     }
