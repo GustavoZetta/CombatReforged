@@ -10,8 +10,7 @@ A group project between Pigzzrule & GustavoZeta
 🟡 -> Updating
 🟢 -> Done!
 
-- 🔴 2 Moviment Abilities for every class
-- 🔴 Classes
+- 🔴 Classes:
   - 🔴 Bard
     - 🔴 Attacks with a bow
     - 🔴 Buffs self
@@ -33,11 +32,13 @@ A group project between Pigzzrule & GustavoZeta
     - 🔴 Stops enemies from moving & attacking
     - 🔴 Become tank
     - 🔴 Has machines
-- 🔴 Item system
-  - 🔴 Unlocking
+- 🟠 Item system
+  - 🟠 Unlocking
   - 🔴 Crafting
   - 🔴 Upgrade
-- 🔴 Friendly Duels (Don't loses any progress)
+- 🟠 Main menu
+  - 🔴 Has save progress feature with multiple save slots
+- 🔴 Friendly Duels (Don't lose any progress)
 - 🔴 PvP
   - 🔴 Anti Log-Out
   - 🔴 Match Finding
