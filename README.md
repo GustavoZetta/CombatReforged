@@ -20,7 +20,7 @@ A group project between Pigzzrule & GustavoZeta
     - 🔴 Projectiles
     - 🔴 Flight
   - 🔴 SwashBuckler
-    - 🔴 Invencible for 0.5s
+    - 🔴 Invencible
     - 🔴 Lunge
     - 🔴 Dash
     - 🔴 Slash
