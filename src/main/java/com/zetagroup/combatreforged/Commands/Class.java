@@ -1,6 +1,7 @@
 package com.zetagroup.combatreforged.Commands;
 
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -10,16 +11,27 @@ import org.bukkit.entity.Player;
 import com.zetagroup.combatreforged.ConfigManager;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.logging.Level;
+
 
 public class Class implements CommandExecutor {
 
     YamlConfiguration config = null;
+    public String cmd = "class"; // Defining the "/class" command
     
     public Class(ConfigManager configManager) {
         config = configManager.getFile("resources/config.yml"); //TODO: Check that this is correct path with Gustavo
+
+        try {
+            String temp = config.getString("commands.class.name");
+            if (!(temp == null) || !(temp.isEmpty())) {
+                cmd = temp;
+            }
+        } catch (NullPointerException Error) {
+            Bukkit.getLogger().log(Level.SEVERE, "Error while getting the command.yml, trying to use the default file (it might be broken)");
+        }
     }
-    
-    static String cmd = "class"; // Defining the "/class" command as a "static" for less RAM usage
+
     @Override
     public boolean onCommand(@NotNull CommandSender sender, Command command, @NotNull String label, String[] arguments) {
         if (!(command.getName().equals(cmd))) { return true; } // If the command name executed is not "/class", end the function by returning "true" for "Executed Right"
