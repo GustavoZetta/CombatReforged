@@ -18,7 +18,7 @@ public class Combo implements CommandExecutor {
         config = configManager.getFile("resources/config.yml"); //TODO: Check that this is correct path with Gustavo
     }
     
-    static String cmd = "class"; // Defining the "/class" command as a "static" for less RAM usage
+    static String cmd = "FlingMe"; // Defining the "/class" command as a "static" for less RAM usage
     @Override
     public boolean onCommand(@NotNull CommandSender sender, Command command, @NotNull String label, String[] arguments) {
         if (!(command.getName().equals(cmd))) { return true; } // If the command name executed is not "/class", end the function by returning "true" for "Executed Right"
@@ -26,9 +26,9 @@ public class Combo implements CommandExecutor {
         // If any function return false then it will show the default paper error message
         // If it returns true, the message will not appear
         Player player = (Player) sender; // Defining the sender as a player, since now we know its really a player
-
-        // I'll be using that for the class selection menu later
-
+        player.setVelocity(player.;
         return true;
+
+        player.
     }
 }

@@ -10,8 +10,8 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         ConfigManager configInstance = new ConfigManager(this); // Initiating the config instance (only one is used for the entire plugin)
-        Class CommandClassInstance = new Class(configInstance);
-        Combo ComboClassInstance = new Combo(configInstance);
+        Class commandClassInstance = new Class(configInstance);
+        Combo comboClassInstance = new Combo(configInstance);
     }
 
     @Override
