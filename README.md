@@ -19,7 +19,7 @@ A group project between Pigzzrule & GustavoZeta
     - 🔴 Can throw any game potion in any player
     - 🔴 Projectiles
     - 🔴 Flight
-  - 🔴 SwashBuckler (Wtf this name means)
+  - 🔴 SwashBuckler
     - 🔴 Invencible for 0.5s
     - 🔴 Lunge
     - 🔴 Dash
