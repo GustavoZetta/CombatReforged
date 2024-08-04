@@ -11,10 +11,11 @@ public class ConfigManager {
 
     public ConfigManager(Main plugin) {
         this.plugin = plugin;
+        setFiles();
     }
 
 
-    private String getLog(int LogNum) { // private function that returns the log messages
+    public String getLog(int LogNum) { // public function that returns the log messages
         File file = null; // Defining "file"
         YamlConfiguration config = null; // Defining "config"
         String prefix = null; // Defining "prefix" (for messages)
@@ -60,6 +61,16 @@ public class ConfigManager {
                     return prefix + " Error 406: File is not a YAML Config file"; // return the backup message
                 }
             }
+            case 407: { // else if (LogNum == 406) {...}
+                try {
+                    String msg = config.getString("Wrong File Type When Saving").replace('&', '§'); // replaces the & char with the actual color character
+                    msg.replace("{prefix}", prefix); // Transform the "{prefix}" placeholder into the actual prefix
+                    return msg; // return the message the plugin got from the config
+                } catch (NullPointerException Error) { // Catch any error
+                    Bukkit.getLogger().log(Level.WARNING, prefix + " Error while trying to get log messages from the messages/msglog.yml file"); // Sends a warning about the error from the log messages
+                    return prefix + " Error 406: File is not a YAML Config file"; // return the backup message
+                }
+            }
             default: { // else {...} -> Its an default case if other comparations were not found
                 return prefix + " Unknown error, please contact the developer"; // return the backup message
             }
@@ -85,5 +96,16 @@ public class ConfigManager {
             Bukkit.getLogger().log(Level.WARNING, getLog(406));
             return null;
         }
+    }
+
+    public boolean saveFiles(YamlConfiguration fileToSave, String filepath) {
+        if (filepath == null || filepath.trim().isEmpty()) { return false; } // If the filepath is empty, finishes the function
+
+        if (filepath.endsWith(".yml")) { // If the filetype is a .yml, continues
+
+        } else { // If file is not a .yml, sends an error to the console and ends the function
+            Bukkit.getLogger().log(Level.WARNING, getLog(406));
+        }
+        fileToSave.save(fileToSave);
     }
 }

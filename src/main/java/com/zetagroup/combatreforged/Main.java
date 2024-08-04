@@ -13,6 +13,7 @@ public final class Main extends JavaPlugin {
         Class command_ClassInstance = new Class(configInstance);
         Combo command_FlingmeInstance = new Combo(configInstance);
 
+
         this.getCommand("class").setExecutor(command_ClassInstance);
         this.getCommand("flingme").setExecutor(command_FlingmeInstance);
     }

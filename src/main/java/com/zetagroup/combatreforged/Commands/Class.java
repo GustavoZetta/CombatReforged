@@ -33,8 +33,8 @@ public class Class implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, Command command, @NotNull String label, String[] arguments) {
-        if (!(command.getName().equals(cmd))) { return true; } // If the command name executed is not "/class", end the function by returning "true" for "Executed Right"
+    public boolean onCommand(CommandSender sender, Command command, String commandname, String[] arguments) {
+        if (!(commandname.equals(cmd))) { return true; } // If the command name executed is not "/class", end the function by returning "true" for "Executed Right"
         if (!(sender instanceof Player)) { return true; } // If the sender of the command is not a player, end the function by returning "true" for "Executed Right"
         // If any function return false then it will show the default paper error message
         // If it returns true, the message will not appear
