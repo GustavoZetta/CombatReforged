@@ -43,3 +43,7 @@ A group project between Pigzzrule & GustavoZeta
   - 🔴 Anti Log-Out
   - 🔴 Match Finding
   - 🔴 Global Arena
+- 🔴 100% Customizable
+  - 🟠 Customizable messages (even logs and error messages)
+  - 🔴 Customizable specs (like cooldowns and stuff)
+  - 🟠 Customizable commands
