@@ -2,6 +2,7 @@ package com.zetagroup.combatreforged.Commands;
 
 
 import com.zetagroup.combatreforged.ConfigManager;
+import com.zetagroup.combatreforged.MessageManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,22 +16,19 @@ import java.util.logging.Level;
 
 
 public class Combo implements CommandExecutor {
-
-    YamlConfiguration config = null;
     public String cmd = "flingme"; // Defining the "/flingme" command
 
-    public Combo(ConfigManager configManager) {
-        config = configManager.getFile("resources/config.yml"); //TODO: Check that this is correct path with Gustavo
+    ConfigManager Config;
+    MessageManager Message;
 
-        try {
-            String temp = config.getString("commands.class.name");
-            if (!(temp == null) || !(temp.isEmpty())) {
-                cmd = temp;
-            }
-        } catch (NullPointerException Error) {
-            Bukkit.getLogger().log(Level.SEVERE, "Error while getting the command.yml, trying to use the default file (it might be broken)");
-        }
+    YamlConfiguration MainConfig;
+
+    public Combo(ConfigManager configManager, MessageManager messageManager) {
+        Config = configManager;
+        Message = messageManager;
+        MainConfig = Config.getFile("classes/bard.yml");
     }
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String commandname, String[] arguments) {
         if (!(commandname.equals(cmd))) { return true; } // If the command name executed is not "/class", end the function by returning "true" for "Executed Right"
@@ -40,7 +38,8 @@ public class Combo implements CommandExecutor {
         Player player = (Player) sender; // Defining the sender as a player, since now we know its really a player
         Vector unitVector = new Vector(player.getLocation().getDirection().getX(), player.getLocation().getDirection().getY() , player.getLocation().getDirection().getZ());
         unitVector = unitVector.normalize();
-        player.setVelocity(unitVector.multiply(2));
+        player.setVelocity(unitVector.multiply(MainConfig.getDouble("abilities.lunge.velocity")));
+        Message.sendPlayerMessage(player, "&cYou used your lunge ability!");
         return true;
     
 

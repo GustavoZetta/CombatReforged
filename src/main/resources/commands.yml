@@ -16,7 +16,7 @@ prefix: "&8[&cCombatReforged&8]&7"
 #       //////////////////////////////
 
 # For now, only the messages with more than one string of code are multi-line support.
-# Later on I'll make so every message in this folder can be multiple lines.
+# Later on I'll make so every message in this file can be multiple lines.
 
 commands: # Don't change this! 
   class: # Don't change this!

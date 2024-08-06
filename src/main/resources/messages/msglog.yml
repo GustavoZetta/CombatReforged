@@ -16,9 +16,10 @@ prefix: "&8[&cCombatReforged&8]&7"
 #       //////////////////////////////
 
 # For now, only the messages with more than one string of code are multi-line support.
-# Later on I'll make so every message in this folder can be multiple lines.
+# Later on I'll make so every message in this file can be multiple lines.
 
+Error Saving File: "{prefix} Error 408: Error while Saving/Loading config file"
 Wrong File Type When Saving: "{prefix} Error 407: File is not a YAML Config file when saving"
 Unknown File Type: "{prefix} Error 406: File is not a YAML Config file"
-No Config: "{prefix} Error 405: Path YAML not found"
+No Config: "{prefix} Error 405: YAML Path not found"
 No File: "{prefix} Error 404: File not Found"
