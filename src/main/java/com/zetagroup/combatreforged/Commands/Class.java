@@ -20,7 +20,7 @@ public class Class implements CommandExecutor {
     public String cmd = "class"; // Defining the "/class" command
     
     public Class(ConfigManager configManager) {
-        config = configManager.getFile("resources/config.yml"); //TODO: Check that this is correct path with Gustavo
+        config = configManager.getFile("resources/config.yml");
 
         try {
             String temp = config.getString("commands.class.name");

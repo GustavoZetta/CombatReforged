@@ -16,11 +16,10 @@ import java.util.logging.Level;
 
 
 public class Combo implements CommandExecutor {
-    public String cmd = "flingme"; // Defining the "/flingme" command
+    //public String cmd = "flingme"; // Defining the "/flingme" command
 
     ConfigManager Config;
     MessageManager Message;
-
     YamlConfiguration MainConfig;
 
     public Combo(ConfigManager configManager, MessageManager messageManager) {
@@ -30,6 +29,7 @@ public class Combo implements CommandExecutor {
     }
 
     @Override
+    // this was not the way i origanlly planned on doing this, my intent was to use combo lock instead
     public boolean onCommand(CommandSender sender, Command command, String commandname, String[] arguments) {
         if (!(commandname.equals(cmd))) { return true; } // If the command name executed is not "/class", end the function by returning "true" for "Executed Right"
         if (!(sender instanceof Player)) { return true; } // If the sender of the command is not a player, end the function by returning "true" for "Executed Right"
@@ -39,9 +39,14 @@ public class Combo implements CommandExecutor {
         Vector unitVector = new Vector(player.getLocation().getDirection().getX(), player.getLocation().getDirection().getY() , player.getLocation().getDirection().getZ());
         unitVector = unitVector.normalize();
         player.setVelocity(unitVector.multiply(MainConfig.getDouble("abilities.lunge.velocity")));
+        //nice^^^
         Message.sendPlayerMessage(player, "&cYou used your lunge ability!");
+        //i think this could get annoying, maybe we should make a cool-down bar instead of a message?
         return true;
     
 
     }
+    //this is also not what this section is for, this was just a test to see if i understood the langue ^^
+    public boolean PlayerDropItemEvent(Player player, Item drop)
+
 }
