@@ -38,12 +38,12 @@ A group project between Pigzzrule & GustavoZeta
   - 🔴 Upgrade
 - 🟠 Main menu
   - 🔴 Has save progress feature with multiple save slots
-- 🔴 Friendly Duels (Don't lose any progress)
+- 🔴 Friendly Duels (Don't loses any progress)
 - 🔴 PvP
   - 🔴 Anti Log-Out
   - 🔴 Match Finding
   - 🔴 Global Arena
 - 🔴 100% Customizable
-  - 🟠 Customizable messages (even logs and error messages)
-  - 🔴 Customizable specs (like cooldowns and stuff)
+  - 🟠 Customizable messages
+  - 🔴 Customizable specs (cooldowns and multiplyers)
   - 🟠 Customizable commands
