@@ -25,7 +25,7 @@ public class Combo implements CommandExecutor {
     public Combo(ConfigManager configManager, MessageManager messageManager) {
         Config = configManager;
         Message = messageManager;
-        MainConfig = Config.getFile("classes/bard.yml");
+        MainConfig = Config.getFile("classes/swashbuckler.yml");
     }
 
     @Override
