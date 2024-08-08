@@ -6,19 +6,39 @@ import com.zetagroup.combatreforged.Commands.Combo;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.logging.Level;
+
 public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        MessageManager messageInstance = new MessageManager(); // Initiating the message instance (only one is used for the entire plugin)
-        ConfigManager configInstance = new ConfigManager(this, messageInstance); // Initiating the config instance (only one is used for the entire plugin)
+        // ################
+        // #   MANAGERS   #
+        // ################
+        MessageManager messageInstance = new MessageManager();
+        ConfigManager configInstance = new ConfigManager(this, messageInstance);
+
+        // ################
+        // #   COMMANDS   #
+        // ################
         Class command_ClassInstance = new Class(configInstance);
         Combo command_FlingmeInstance = new Combo(configInstance, messageInstance);
-
-        Bard class_BardInstance = new Bard(configInstance, messageInstance);
-
         this.getCommand("class").setExecutor(command_ClassInstance);
         this.getCommand("flingme").setExecutor(command_FlingmeInstance);
+
+        // ################
+        // # CONFIG FILES #
+        // ################
+        configInstance.saveDefaultFile("classes/swashbuckler.yml");
+        configInstance.saveDefaultFile("messages/msgcommands.yml");
+        configInstance.saveDefaultFile("messages/msglog.yml");
+        configInstance.saveDefaultFile("commands.yml");
+        configInstance.saveDefaultFile("config.yml");
+
+        // ################
+        // #    CLASSES   #
+        // ################
+        Bard class_BardInstance = new Bard(configInstance, messageInstance);
     }
 
     @Override

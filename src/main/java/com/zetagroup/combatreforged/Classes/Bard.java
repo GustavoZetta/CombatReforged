@@ -16,11 +16,4 @@ public class Bard {
         Message = msg;
         MainConfig = Config.getFile("classes/bard.yml");
     }
-
-    public void Lunge(Player player) {
-        Vector unitVector = new Vector(player.getLocation().getDirection().getX(), player.getLocation().getDirection().getY() , player.getLocation().getDirection().getZ());
-        unitVector = unitVector.normalize();
-        player.setVelocity(unitVector.multiply(MainConfig.getDouble("abilities.lunge.velocity")));
-        Message.sendPlayerMessage(player, "&cYou used your lunge ability!");
-    }
 }
