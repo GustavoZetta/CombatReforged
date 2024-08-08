@@ -16,7 +16,7 @@ import java.util.logging.Level;
 
 
 public class Combo implements CommandExecutor {
-    //public String cmd = "flingme"; // Defining the "/flingme" command
+    public String cmd = "flingme"; // Defining the "/flingme" command (can't set this as a comment cause its being used)
 
     ConfigManager Config;
     MessageManager Message;
@@ -42,11 +42,14 @@ public class Combo implements CommandExecutor {
         //nice^^^
         Message.sendPlayerMessage(player, "&cYou used your lunge ability!");
         //i think this could get annoying, maybe we should make a cool-down bar instead of a message?
+        // yeah, im going to do this now
         return true;
     
 
     }
     //this is also not what this section is for, this was just a test to see if i understood the langue ^^
-    public boolean PlayerDropItemEvent(Player player, Item drop)
+    // public boolean PlayerDropItemEvent(Player player, Item drop)
+    // don't worry, im alredly working in this for you with the events, but i maybe think unstead of droping i think we can have
+    // multiple items with diferently abilities in right and left click? (dm me in discord for me to actually do this)
 
 }
