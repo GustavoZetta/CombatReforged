@@ -1,6 +1,7 @@
 package com.zetagroup.combatreforged.data;
 
 public class PlayerMemory {
+    // Hey, want me to deal with that too? (So you don't mess up with security, performance and other issues you will probably encounter)
     private int count;
     private int count1;
     private int count2;
