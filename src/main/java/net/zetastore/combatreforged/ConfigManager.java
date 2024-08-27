@@ -1,4 +1,4 @@
-package com.zetagroup.combatreforged;
+package net.zetastore.combatreforged;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 

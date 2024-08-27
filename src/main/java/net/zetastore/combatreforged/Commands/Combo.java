@@ -1,18 +1,14 @@
-package com.zetagroup.combatreforged.Commands;
+package net.zetastore.combatreforged.Commands;
 
 
-import com.zetagroup.combatreforged.ConfigManager;
-import com.zetagroup.combatreforged.MessageManager;
-import org.bukkit.Bukkit;
+import net.zetastore.combatreforged.ConfigManager;
+import net.zetastore.combatreforged.MessageManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.logging.Level;
 
 
 public class Combo implements CommandExecutor {

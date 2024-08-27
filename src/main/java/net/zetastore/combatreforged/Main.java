@@ -1,12 +1,9 @@
-package com.zetagroup.combatreforged;
+package net.zetastore.combatreforged;
 
-import com.zetagroup.combatreforged.Classes.Bard;
-import com.zetagroup.combatreforged.Commands.Class;
-import com.zetagroup.combatreforged.Commands.Combo;
-import org.bukkit.command.defaults.BukkitCommand;
+import net.zetastore.combatreforged.Classes.Bard;
+import net.zetastore.combatreforged.Commands.Class;
+import net.zetastore.combatreforged.Commands.Combo;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.logging.Level;
 
 public final class Main extends JavaPlugin {
 

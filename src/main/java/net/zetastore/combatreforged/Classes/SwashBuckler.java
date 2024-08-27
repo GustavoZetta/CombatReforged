@@ -1,7 +1,7 @@
-package com.zetagroup.combatreforged.Classes;
+package net.zetastore.combatreforged.Classes;
 
-import com.zetagroup.combatreforged.ConfigManager;
-import com.zetagroup.combatreforged.MessageManager;
+import net.zetastore.combatreforged.ConfigManager;
+import net.zetastore.combatreforged.MessageManager;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;

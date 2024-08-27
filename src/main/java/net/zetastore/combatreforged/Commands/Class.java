@@ -1,15 +1,13 @@
-package com.zetagroup.combatreforged.Commands;
+package net.zetastore.combatreforged.Commands;
 
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.zetagroup.combatreforged.ConfigManager;
-import org.jetbrains.annotations.NotNull;
+import net.zetastore.combatreforged.ConfigManager;
 
 import java.util.logging.Level;
 
