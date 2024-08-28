@@ -1,5 +1,5 @@
 package net.zetastore.combatreforged.Commands;
-
+////////abadnoned old silly thing i dont need this, can be deleted when we get my new thing working want - pig
 
 import net.zetastore.combatreforged.ConfigManager;
 import net.zetastore.combatreforged.MessageManager;
@@ -9,7 +9,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
-
 
 public class Combo implements CommandExecutor {
     public String cmd = "flingme"; // Defining the "/flingme" command (can't set this as a comment cause its being used)
