@@ -14,7 +14,7 @@ public class SwashBuckler {
     public SwashBuckler(ConfigManager config, MessageManager msg) {
         Config = config;
         Message = msg;
-        MainConfig = Config.getFile("classes/bard.yml");
+        MainConfig = Config.getFile("classes/swashbuckler.yml");
     }
 
     public void Lunge(Player player) {
